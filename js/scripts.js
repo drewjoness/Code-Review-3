@@ -1,16 +1,21 @@
 //Business Logic
+  var pingPongOutput = []
 var pingpong = function(input) {
   var numbers = parseInt(input)
     if ((numbers % 5 === 0) && (numbers % 3 ===0)) {
-      return "Ping!Pong!"
+      pingPongOutput.unshift("Ping!Pong!")
     } else if ((numbers % 3 === 0) && (numbers % 5 !== 0)) {
-      return "Ping!"
+      pingPongOutput.unshift("Ping!")
     } else if ((numbers % 5 === 0) && (numbers % 3 !== 0)) {
-      return "Pong!"
+      pingPongOutput.unshift("Pong!")
     } else {
-      return "Serve up a number."
+      pingPongOutput.unshift("Serve up a number.")
     }
-
+console.log("the value of pingpong output = " + pingPongOutput);
+  for (var index = 1; index === 1; index++) {
+    var listItems = pingPongOutput.slice(0,1);
+console.log("listeItems= " + listItems);
+  }
   };
 
 //jquery user interface
